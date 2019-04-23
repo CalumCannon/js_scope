@@ -12,7 +12,7 @@ const verdict = declareMurderer();
 console.log(verdict);
 
 //Miss Scarlet: she is the murderer inside the scenario object
-
+//-----------------------------------------------------------------------------------------------------------------------------------
 const murderer = 'Professor Plum';
 
 const changeMurderer = function() {
@@ -27,7 +27,9 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
-//Professor Plum: constants cant be changed - Will result in error when try to change const murderer
+//Professor Plum: constants cant be changed - Will result in error when trying to change const murderer
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 let murderer = 'Professor Plum';
 
@@ -38,11 +40,13 @@ const declareMurderer = function() {
 
 const firstVerdict = declareMurderer();
 console.log('First Verdict: ', firstVerdict);
-//Murderer is Mrs Peacock: a local function variable, murderer has been created and asinged Mrs Peacock
+//Murderer is Mrs Peacock: a local function variable, murderer has been created and asigned Mrs Peacock
 
 const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 //Professor Plum as the top murderer variable is within the same scope
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 let suspectOne = 'Miss Scarlet';
 let suspectTwo = 'Professor Plum';
@@ -59,6 +63,8 @@ console.log(suspects);
 
 console.log(`Suspect three is ${suspectThree}.`);
 //Peacock: the initial declaration of suspectThree is not affected by calling declareAllSuspects because let is used to declare suspectThree within the declareAllSuspects function which creates a new block scoped variable
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 const scenario = {
   murderer: 'Miss Scarlet',
@@ -78,6 +84,8 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 //The weapon is the Revolver: changed within the change weapon function
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 let murderer = 'Colonel Mustard';
 
@@ -99,6 +107,8 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 //The murderer is Mrs White: Murderer is initially changed to Mr Green when changeMurderer is called and within this function plotTwist is called which changes the murderer again
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 let murderer = 'Professor Plum';
 
@@ -128,6 +138,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 //`The murderer is Mr Green: Line 8 Does not change murderer because of use of let.
 //Line 11 Does not changed murderer because as it is the child function
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 const scenario = {
   murderer: 'Mrs. Peacock',
@@ -165,6 +177,8 @@ changeScenario();
 const verdict = declareWeapon();
 console.log(verdict);
 //The weapon is Candle Stick: it is set in line 19
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
 let murderer = 'Professor Plum';
 
